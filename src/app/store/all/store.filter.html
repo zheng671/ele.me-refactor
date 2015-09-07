@@ -1,0 +1,76 @@
+
+<div class="tab grey container-flex">
+	<ul class="tab-items">
+		<li class="tab-item">餐厅分类:</li>
+		<li class="tab-item" ng-class="{active: vm.filter1_index == null}"><a ng-click="vm.filter1_index = null">全部商家</a></li>
+		<li class="tab-item" ng-click="vm.filter1_index = $index" ng-class="{active: vm.filter1_index == $index}" ng-repeat="category in vm.categories">
+			<a>{{category.name}}</a>
+		</li>
+	</ul>
+	<div class="tab-content" ng-class="{active: $index == vm.filter1_index}" ng-repeat="category in vm.categories">
+		<div class="label blue" ng-repeat="subCategory in category.subCategories">{{subCategory.name}}</div>
+	</div>
+</div>
+<div class="tab grey container-flex">
+	<ul class="tab-items">
+		<li class="tab-item">优惠活动:</li>
+		<li class="tab-item">
+			<a ng-class="{'label blue': vm.filter2_index == null}" ng-click="vm.filter2_index = null">全部商家</a>
+		</li>
+		<li class="tab-item" ng-click="vm.filter2_index = $index" ng-repeat="feature in vm.features" ng-show="feature.isPromo">
+			<a ng-class="{'label blue': vm.filter2_index == $index}">{{feature.name}}</a>
+		</li>
+	</ul>
+</div>
+<div class="row grey container">
+	<div class="col-8">
+		<div class="tab grey">
+			<ul class="tab-items">
+				<li class="tab-item font-blue">默认排序</li>
+				<li class="tab-item active"><a>销量</a></li>
+				<li class="tab-item"><a>评价</a></li>
+				<li class="tab-item dropdown">
+					<div class="dropdown-title">
+						<a>其他排序</a>
+						<i class="icon-arrow-down"></i>
+						<i class="icon-arrow-up"></i>
+					</div>
+					<div class="dropdown-content">
+						<ul>
+							<li>配送速度</li>
+							<li>起送金额</li>
+							<li>新开餐厅</li>
+						</ul>
+					</div>
+				</li>
+				<li class="tab-item dropdown">
+					<div class="dropdown-title">
+						<a>起送价格: 不限</a>
+						<i class="icon-arrow-down"></i>
+						<i class="icon-arrow-up"></i>
+					</div>
+					<div class="dropdown-content">
+						<ul>
+							<li>不限</li>
+							<li>15元以下</li>
+							<li>20元以下</li>
+							<li>30元以下</li>
+							<li>40元以下</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-4">
+		<div class="tab grey">
+			<ul class="tab-items">
+				<li class="tab-item" ng-repeat="feature in vm.features" ng-show="!feature.isPromo">
+					<div>
+						<input type="checkbox" />{{feature.name}}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

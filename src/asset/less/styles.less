@@ -1,0 +1,103 @@
+@import "common/reset.less";
+@import "variable/variable.less";
+@import "font.less";
+@import "icon.less";
+@import "component/grid.less";
+@import "component/nav.less";
+@import "component/tab.less";
+@import "component/label.less";
+@import "component/item.less";
+@import "component/sidebar.less";
+@import "component/dropdown.less";
+@import "component/input.less";
+@import "component/segment.less";
+@import "component/slider.less";
+@import "component/popover.less";
+
+@import "custom.less";
+
+body{
+	color: @grey-3;
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+	font-family: 'PingFang SC', 'Lantinghei SC', 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans;
+	background-color:#f7f7f7;;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/************ Container *************/
+.container-lg{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container-flex{
+	padding: 10px;
+}
+
+.container{
+	padding: 0 10px;
+}
+
+/************ Text-Style ************/
+.font-lg.grey{
+	color: @grey-9;
+}
+.font-lg.grey:hover{
+	color: @grey-3;
+}
+.font-md{
+	font-size: 16px;
+}
+.font-bold{
+	font-weight: bold;
+}
+.font-blue{
+	color: @blue;
+}
+.font-orange{
+	color: @orange;
+}
+.font-lg{
+	font-size: 20px;
+}
+.font-sm{
+	font-size: 12px;
+}
+
+/************ Top Nav ***************/
+
+
+/************ Footer *****************/
+footer{
+	position: relative;
+    margin-top: 50px;
+    border-top: 1px solid @off-white;
+	.footer-link{
+		width: 100%;
+		display: inline-block;
+		font-size: 12px;
+	}
+	.footer-title{
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+	.footer-section{
+		margin-top: 20px;
+		@media (max-width: 992px){
+			text-align: center;
+		}
+	}
+	.footer-qrcode{
+		img{
+			width: 90px;
+    		height: 90px;
+		}
+	}
+}

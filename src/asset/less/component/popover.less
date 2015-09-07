@@ -1,0 +1,46 @@
+/*********** Popover ***************/
+
+.popover{
+	border: 2px solid @grey-c;
+	background-color: @white;
+	width: 300px;
+	position: absolute;
+    display: none;
+    z-index: 102;
+}
+
+.popover.active{
+    display: block;
+}
+
+.popover .arrow{
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ddd;
+}
+
+.popover.right .arrow{
+    border-top: 0;
+    border-right: 0;
+    left: -8px;
+    top: 20px;
+}
+
+.popover.left .arrow{
+    border-bottom: 0;
+    border-left: 0;
+    right: -8px;
+    top: 20px;
+}
+
+.popover.bottom .arrow{
+    border-bottom: 0;
+    border-right: 0;
+    left: 20px;
+    top: -8px;
+}

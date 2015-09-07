@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="eleme">
+
+<head>
+    <meta charset="utf-8">
+    <title>饿了么</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jianan Zheng">
+    <link rel="apple-touch-icon-precomposed" href="https://static2.ele.me/apple-touch-icon.png?v=2">
+    <link rel="shortcut icon" href="//static2.ele.me/eleme/desktop/media/img/favicon-16x16.png" type="image/png">
+    <link rel="icon" href="//static2.ele.me/eleme/desktop/media/img/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="//static2.ele.me/eleme/desktop/media/img/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="//static2.ele.me/eleme/desktop/media/img/favicon.png" type="image/png" sizes="96x96">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(src) styles/lib.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/.tmp/styles.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view></div>
+
+    <script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
+  
+    <!-- build:js(src) scripts/lib.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <script src="/src/app/app.module.js"></script>
+    <script src="/src/app/app.router.js"></script>
+    <script src="/src/app/app.translate.js"></script>
+    <script src="/src/app/main/main.controller.js"></script>
+    <script src="/src/app/store/store.controller.js"></script>
+    <script src="/src/app/utility/eleme.slider.js"></script>
+    <script src="/src/app/utility/eleme.tab.js"></script>
+    <!-- endinject -->
+    <!-- inject:template:js -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+</html>
