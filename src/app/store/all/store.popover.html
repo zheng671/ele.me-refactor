@@ -1,0 +1,26 @@
+<div id="store-popover-{{store.id}}" class="popover right">
+	<div class="arrow"></div>
+	<div class="container-flex item">
+		<div class="item-content">
+			<div class="item-title">
+				{{store.name}}
+			</div>
+			<hr>
+			<div class="item-detail" ng-repeat="feature in store.features">
+				<i class="{{feature.color}}" ng-class="{'label-sm' : feature.isPromo, 'label-border-sm': !feature.isPromo}">{{feature.abbr}}</i>
+				<span class="font-sm">{{feature.desc}}</span>
+			</div>
+			<div class="item-detail">
+				<div class="label-sm lg-grey">
+					<span>{{store.min_amount}}元起送</span> | 
+					<span ng-if="store.delivery_fee == 0">免费配送</span>
+					<span ng-if="store.delivery_fee != 0">配送费{{store.delivery_fee}}元</span> | 
+					<span>平均配送时间{{store.delivery_time}}分</span>
+				</div>
+			</div>
+			<div class="item-detail font-sm">
+				{{store.notification}}
+			</div>
+		</div>
+	</div>
+</div>

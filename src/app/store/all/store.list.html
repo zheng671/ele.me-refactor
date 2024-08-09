@@ -1,0 +1,7 @@
+
+<div class="row-4 doubling">
+	<div class="col" ng-repeat="store in vm.stores | orderBy: 'status'">
+		<div ng-include="'app/store/all/store.block.html'"></div>
+		<div ng-include="'app/store/all/store.popover.html'"></div>
+	</div>
+</div>

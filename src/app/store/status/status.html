@@ -1,0 +1,8 @@
+<input type="text" id="id" ng-model="vm.storeid" placeholder="store id"/>
+<select name="status" ng-model="vm.newStatus">
+	<option value="1">open</option>
+	<option value="2">open but do not delivery</option>
+	<option value="3">busy</option>
+	<option value="4">closed</option>
+</select>
+<button ng-click="vm.onStatusChange(vm.storeid, vm.newStatus)">submit</button>

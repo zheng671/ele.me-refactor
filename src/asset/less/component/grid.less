@@ -1,0 +1,73 @@
+/************ Grid ******************/
+// Grid System with col number
+.generate-row-col(4);
+.generate-row-col(@n, @i: 1) when (@i =< @n) {
+	@media (min-width: @min-computer){
+		.row-@{i}{
+			display: flex;    
+			-webkit-box-direction: normal;
+		    -webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		    flex-direction: row;
+		    -webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		}
+		.row-@{i} .col {
+			width: ( 100% / @i);
+			display: inline-block;
+		}
+	}
+  .generate-row-col(@n, (@i + 1));
+}
+
+// Doubling column in medium screen width
+.generate-row-col-doubling(4);
+.generate-row-col-doubling(@n, @i: 1) when (@i =< @n) {
+	@media (max-width: @max-computer) and (min-width: @min-computer){
+		.row-@{i}.doubling > .col {
+			width: ( 100% / ceil(@i / 2));
+			display: inline-block;
+		}
+	}
+	@media (max-width: @max-tablet){
+		.row-@{i}.doubling > .col {
+			width: ( 100% / ceil(@i / 4));
+			display: inline-block;
+		}
+	}
+  .generate-row-col-doubling(@n, (@i + 1));
+}
+
+// General Grid
+.generate-columns(12);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+	@media (min-width: @min-monitor){
+		.row > .col-@{i} {
+		width: (@i * 100% / @n);
+		display: inline-block;
+		}
+	}
+  	@media (max-width: @max-computer){
+	.row > .col-@{i} {
+		width: 100%;
+	}
+  }
+  .generate-columns(@n, (@i + 1));
+}
+
+.row{
+	display: flex;    
+	-webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.grey{
+	background-color: @grey-e;
+}

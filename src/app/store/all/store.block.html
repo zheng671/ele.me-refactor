@@ -1,0 +1,38 @@
+<a id="store-block-{{store.id}}" class="store-block" ng-mouseenter="vm.openPopover(store.id, $event)" ng-mouseleave="vm.closePopover(store.id, $event)">
+	<div class="item" ng-class="{disable: store.status == 3 || store.status == 4}" ng-click="vm.addRecent(store)">
+		<div class="item-image">
+			<img src="//fuss10.elemecdn.com/a/7e/29bc7a0c790b5257e22738d246ce8jpeg.jpeg?imageMogr2/thumbnail/70x70/format/webp/quality/85" width="70" height="70" alt="小罗先生(东川路店)" class="rstblock-logo-icon">
+			<div class="item-image-title">{{store.delivery_time}}min</div>
+		</div>
+		<div class="item-content">
+			<div class="item-title font-md font-bold">
+				{{store.name}}
+			</div>
+			<div class="item-detail">
+				<div class="item-detail icon-star store-rating">
+					<span class="icon-star store-rating store-rating-overlay" style="width:{{store.rating * 20}}%"></span>
+				</div>
+				<span>月销{{store.monthly_sales}}份</span>
+				<div>
+					<span>{{store.min_amount}}元起送<span> / 
+					<span ng-if="store.delivery_fee == 0">免费配送</span>
+					<span ng-if="store.delivery_fee != 0">配送费{{store.delivery_fee}}元</span>
+				</div>
+			</div>
+			<div class="item-detail" ng-switch="store.status">
+				<div ng-switch-when="1">
+					<i class="{{feature.color}}" ng-class="{'label-sm' : feature.isPromo, 'label-border-sm': !feature.isPromo}" ng-repeat="feature in store.features | orderBy:id">{{feature.abbr}}</i>
+				</div>
+				<div ng-switch-when="2">
+					<div class="label-border-sm green">可预订，<span>{{store.start_delivery_time}}</span>后送餐</div>
+				</div>
+				<div ng-switch-when="3">
+					<div class="label-sm grey">餐厅繁忙,不接受新单</div>
+				</div>
+				<div ng-switch-when="4">
+					<div class="label-sm grey">餐厅休息,暂不接单</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>

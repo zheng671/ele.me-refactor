@@ -1,0 +1,50 @@
+<footer>
+	<div class="row-2">
+		<div class="col">
+			<div class="row-{{$root.footerLinks.length}}">
+				<div class="col footer-section" ng-repeat="section in $root.footerLinks">
+					<span class="footer-title">{{section.title | translate}}</h4>
+					<a class="font-lg grey footer-link" href={{option.url}} ng-repeat="option in section.options">{{option.name | translate}}</a>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="row-2">
+				<div class="col footer-section">
+					<div class="footer-title">
+						24小时客服热线 : 
+						<a class="inherit" href="tel:10105757">10105757</a>
+					</div>
+					<div class="footer-title">
+						意见反馈 : 
+						<a class="inherit" href="mailto:feedback@ele.me">feedback@ele.me</a>
+					</div>
+					<div class="footer-title">
+						关注我们 :
+						<a href="http://e.weibo.com/elemeorder" class="icon-wechat" target="_blank"></a>
+						<div class="popover top">
+							<img src="//static11.elemecdn.com/eleme/desktop/media/img/wexinqc100@2x.c310b6.png" alt="微信号: elemeorder">
+							<div>微信号: elemeorder</div>
+							<div>饿了么网上订餐</div>
+						</div>
+						<a href="http://e.weibo.com/elemeorder" class="icon-weibo" target="_blank"></a>
+						<a href="http://page.renren.com/elemeorder" class="icon-renren" target="_blank"></a>
+					</div>
+				</div>
+				<div class="col footer-section">
+					<div class="col-4">
+						<a class="footer-qrcode" href="/mobile" target="_blank">
+							<img src="//static11.elemecdn.com/eleme/desktop/media/img/appqc.bce409.png" class="footer-mobile-icon" alt="扫一扫下载饿了么手机 App">
+						</a>
+					</div>
+					<div class="col-8">
+						<p class="font-md">下载手机版</p>
+						<p>扫一扫,手机订餐方便</p>
+						<a class="label icon-phone" ng-href="http://m.ele.me/download/ios/eleme" target="_blank" href="http://m.ele.me/download/ios/eleme">iPhone</a>
+						<a class="label icon-android" ng-href="http://m.ele.me/download/android/eleme" target="_blank" href="http://m.ele.me/download/android/eleme">Android</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</footer>

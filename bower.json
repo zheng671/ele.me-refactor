@@ -1,0 +1,16 @@
+{
+  "name": "vidaexpress",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular-ui-router": "~0.2.13",
+    "angular": "~1.3.4",
+    "angular-touch": "~1.4.4",
+    "angular-translate": "~2.7.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.4"
+  },
+  "resolutions": {
+    "angular": "~1.3.4"
+  }
+}

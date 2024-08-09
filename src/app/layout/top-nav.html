@@ -1,0 +1,35 @@
+<nav class="topnav blue">
+	<div class="container-lg">
+		<div class="row-2 doubling">
+			<div class="col">
+				<ul class="nav-left">
+					<li class="nav-item">
+						<a href="/" class="icon-lg icon-white icon-logo"></a>
+					</li>
+					<li class="nav-item"><a>{{'首页' | translate}}</a></li>
+					<li class="nav-item"><a>{{'品牌餐厅' | translate}}<i class="elemeicon elemeicon-hot"></i></a></li>
+					<li class="nav-item"><a>{{'我的饿单' | translate}}</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul class="nav-left">
+					<li class="nav-item"><a><i class="icon icon-gift"></i>{{'积分商城' | translate}}</a></li>
+					<li class="nav-item"><a><i class="icon icon-service"></i>{{'客服中心' | translate}}</a></li>
+					<li class="nav-item"><a ng-click="vm.openApp()"><i class="icon icon-mobile"></i>{{'手机应用' | translate}}</a></li>
+					<li class="nav-item"><a ng-click="vm.openApp()">
+						<span ng-click="vm.switchLanguage('ch_CH')">简</span>/
+						<span ng-click="vm.switchLanguage('en_EN')">EN</span>
+					</li>
+				</ul>
+				<ul class="nav-right">
+					<li class="nav-item">
+						<span class="topbar-profilebox-avatar icon-profile"></span>
+						<a href="https://account.ele.me/login" target="_blank">{{'登陆' | translate}}</a>/
+						<a href="https://account.ele.me/register" target="_blank">{{'注册' | translate}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</nav>

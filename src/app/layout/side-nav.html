@@ -1,0 +1,22 @@
+<div class="sidebar overlay right wide grey">
+	<div class="sidebar-toggle">
+		<div class="sidebar-middle">
+			<a class="sidebar-btn icon-order"></a>
+			<span class="sidebar-divider"></span>
+			<a class="sidebar-btn icon-cart">美食篮子</a>
+			<span class="sidebar-divider"></span>
+			<a class="sidebar-btn icon-notice"></a>
+			<a class="sidebar-btn icon-history" ng-click="vm.showSidebar = !vm.showSidebar"></a>
+		</div>
+		<div class="sidebar-bottom">
+			<a class="sidebar-btn icon-QR-code"></a>
+			<a class="sidebar-btn icon-service"></a>
+			<a class="sidebar-btn icon-feedback"></a>
+		</div>
+	</div>
+	<div class="sidebar-content" ng-show="vm.showSidebar">
+		<div ng-repeat="store in $root.recents">
+			<div ng-include="'app/store/all/store.block.html'"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+.topnav{
+	position: relative;
+    min-height: 60px;
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		> li {
+			padding: @padding;
+			float: left;
+			min-width: 72px;
+			a{
+				line-height: @line-height;
+			}
+		}
+	}
+}
+
+@media (max-width: @max-computer){
+	.topnav{
+		ul > li {
+			min-width: 50px;
+		}
+	}
+}
+
+.nav-left{
+	float: left;
+}
+.nav-right{
+	float: right;
+}
+
+.topnav.blue{
+	background-color: @blue;
+	color: @white;
+	a {
+		color: @white;
+	}
+}
